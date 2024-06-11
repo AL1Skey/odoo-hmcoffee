@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+
+<!-- Pegawai List View -->
 <record id="view_pegawai_tree" model="ir.ui.view">
         <field name="name">pegawai.tree</field>
         <field name="model">hmcoffee.pegawai</field>
@@ -7,6 +9,7 @@
             <tree string="Pegawai">
                 <field name="nama"/>
                 <field name="usia"/>
+                <field name="jabatan" />
             </tree>
         </field>
     </record>
@@ -38,10 +41,13 @@ sequence="10"
     <field name="arch" type="xml">
         <form string="Pegawai">
             <sheet>
-                <group>
+                <group name="Personal Info" string="Personal Info">
                     <!-- Add your fields here -->
                     <field name="nama"/>
-                    <field name="usia"/>
+                    <!-- <field name="usia"/> -->
+                </group>
+                <group name="Jabatan" string="Jabatan">
+                    <field name="jabatan" />
                 </group>
             </sheet>
         </form>
