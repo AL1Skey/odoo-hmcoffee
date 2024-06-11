@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+<record id="view_pegawai_tree" model="ir.ui.view">
+        <field name="name">pegawai.tree</field>
+        <field name="model">hmcoffee.pegawai</field>
+        <field name="arch" type="xml">
+            <tree string="Pegawai">
+                <field name="nama"/>
+                <field name="usia"/>
+            </tree>
+        </field>
+    </record>
+
+
+
+<!-- Action Menu Selection -->
+<record id="hmcoffee_pegawai_action" model="ir.actions.act_window">
+<field name="name">Pegawai</field>
+<field name="type">ir.actions.act_window</field>
+<field name="res_model">hmcoffee.pegawai</field>
+<field name="view_mode">tree,form</field>
+</record>
+
+<!-- Action Menu -->
+<menuitem
+id="hmcoffee_pegawai_menu_act"
+name="Pegawai"
+parent="stakeholder_menu_categ"
+action="hmcoffee_pegawai_action"
+sequence="10"
+/>
+
+
+<!-- Form untuk CRUD -->
+<record id="hmcoffee_pegawai_form" model="ir.ui.view">
+    <field name="name">Form</field>
+    <field name="model">hmcoffee.pegawai</field>
+    <field name="arch" type="xml">
+        <form string="">
+            <sheet>
+                <group>
+                    <!-- Add your fields here -->
+                    <field name="name"></field>
+                    <field name="usia"></field>
+                </group>
+            </sheet>
+        </form>
+    </field>
+</record>
+
+</odoo>
