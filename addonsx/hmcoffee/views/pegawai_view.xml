@@ -24,17 +24,9 @@
 <field name="view_mode">tree,form</field>
 </record>
 
-<!-- Action Menu -->
-<menuitem
-id="hmcoffee_pegawai_menu_act"
-name="Pegawai"
-parent="stakeholder_menu_categ"
-action="hmcoffee_pegawai_action"
-sequence="10"
-/>
 
 
-<!-- Form untuk CRUD -->
+<!-- CRUD Form -->
 <record id="hmcoffee_pegawai_form" model="ir.ui.view">
     <field name="name">Form</field>
     <field name="model">hmcoffee.pegawai</field>
@@ -44,7 +36,7 @@ sequence="10"
                 <group name="Personal Info" string="Personal Info">
                     <!-- Add your fields here -->
                     <field name="nama"/>
-                    <!-- <field name="usia"/> -->
+                    <field name="usia"/>
                 </group>
                 <group name="Jabatan" string="Jabatan">
                     <field name="jabatan" />
@@ -53,5 +45,15 @@ sequence="10"
         </form>
     </field>
 </record>
+
+
+<!-- Action Menu -->
+<menuitem
+id="hmcoffee_pegawai_menu_act"
+name="Pegawai"
+parent="stakeholder_menu_categ"
+action="hmcoffee_pegawai_action"
+sequence="10"
+/>
 
 </odoo>

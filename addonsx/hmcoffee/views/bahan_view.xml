@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    
+    <!-- Bahan List View -->
+    <record id="view_bahan_tree" model="ir.ui.view">
+        <field name="name">bahan.tree</field>
+        <field name="model">hmcoffee.produk.bahan</field>
+        <field name="arch" type="xml">
+            <tree string="Bahan">
+                <field name="nama"/>
+                <field name="harga" />
+                <field name="stok" />
+                <field name="bahan_id" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action Menu Selection -->
+    <record id="hmcoffee_bahan_action" model="ir.actions.act_window">
+        <field name="name">Bahan</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hmcoffee.produk.bahan</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- CRUD Form -->
+    <record id="hmcoffee_bahan_form" model="ir.ui.view">
+        <field name="name">Form</field>
+        <field name="model">hmcoffee.produk.bahan</field>
+        <field name="arch" type="xml">
+            <form string="Bahan">
+                <sheet>
+                    <group name="Form Bahan" string="Form Bahan">
+                        <field name="nama"/>
+                        <field name="harga" />
+                        <field name="stok" />
+                    </group>
+                    <group name="Form Bahan" string="Form Bahan">
+                       <field name="bahan_id" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!-- Action -->
+    <menuitem id="hmcoffee_bahan_act" name="Daftar Bahan" parent="bahan_menu_categ" action="hmcoffee_bahan_action" sequence="10" />
+</odoo>

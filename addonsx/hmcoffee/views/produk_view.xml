@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Produk List View -->
+    <record id="view_produk_tree" model="ir.ui.view">
+        <field name="name">produk.tree</field>
+        <field name="model">hmcoffee.produk</field>
+        <field name="arch" type="xml">
+            <tree string="Produk">
+                <field name="nama"/>
+                <field name="harga"/>
+                <field name="kategori"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Produk Form View -->
+    <record id="hmcoffee_produk_form" model="ir.ui.view">
+        <field name="name">produk.form</field>
+        <field name="model">hmcoffee.produk</field>
+        <field name="arch" type="xml">
+            <form string="Produk">
+                <sheet>
+                    <group name="Produk" string="Produk">
+                        <field name="nama"/>
+                        <field name="kategori"/>
+                        <field name="harga"/>
+                    </group>
+                        <group name="Bahan-Bahan" string="Bahan-Bahan">
+                        <field name="bahan">
+                            <tree string="Bahan-bahan" editable="bottom">
+                                <field name="nama" />
+                                <field name="stok" />
+                                <field name="harga"/>
+                            </tree>
+                        </field>
+                        </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action for Produk -->
+    <record id="hmcoffee_produk_action" model="ir.actions.act_window">
+        <field name="name">Produk</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hmcoffee.produk</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menuitem for Produk -->
+    <menuitem id="hmcoffee_produk_menu" name="Daftar Produk" parent="produk_menu_categ" action="hmcoffee_produk_action" sequence="20"/>
+</odoo>

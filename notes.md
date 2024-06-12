@@ -61,3 +61,24 @@ class Pegawai(models.Model):
         'views/templates.xml',
     ],
 ```
+- view tidak tampil dikarenakan akses kontrol. biasanya di Id, Id itu tidak boleh duplikat di csv security
+> sebelum
+```csv
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hmcoffee_pegawai,hmcoffee.pegawai,model_hmcoffee_pegawai,,1,1,1,1
+access_hmcoffee_produk,access_hmcoffee_produk,model_hmcoffee_produk,,1,1,1,1
+access_hmcoffee_produk,hmcoffee.produk.bahan,model_hmcoffee_produk_bahan,,1,1,1,1
+access_hmcoffee_pesanan,hmcoffee.pesanan,model_hmcoffee_pesanan,,1,1,1,1
+```
+> sesudah
+```csv
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hmcoffee_pegawai,hmcoffee.pegawai,model_hmcoffee_pegawai,,1,1,1,1
+access_hmcoffee_produk,access_hmcoffee_produk,model_hmcoffee_produk,,1,1,1,1
+access_hmcoffee_produk_bahan,hmcoffee.produk.bahan,model_hmcoffee_produk_bahan,,1,1,1,1
+access_hmcoffee_pesanan,hmcoffee.pesanan,model_hmcoffee_pesanan,,1,1,1,1
+```
+
+- Jika ada error di view:
+    - jika ada error di view dan muncul di terminal, maka errornya ada di ketidakcocokan antara nama fields di view dan nama fields di model
+    - jika tidak ada error di terminal, maka errornya mungkin terdapat di security yang mana sepertinya ada yang duplikat

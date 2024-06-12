@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-<data>
-<!-- Root Menu -->
-<menuitem id="hmcoffee_menu_root" name="HM Coffee"/>
+    <data>
+        <!-- Root Menu -->
+        <menuitem id="hmcoffee_menu_root" name="HM Coffee" sequence="50" />
 
-<!-- Category Menu -->
-<menuitem id="stakeholder_menu_categ" name="Stakeholder" parent="hmcoffee_menu_root" sequence="10"/>
+        <!-- Stakeholder Category Menus -->
+        <menuitem 
+        id="stakeholder_menu_categ" 
+        name="Stakeholder" 
+        parent="hmcoffee_menu_root" 
+        sequence="10"/>
+        
+        <!-- Bahan Category Menus -->
+        <menuitem 
+        id="bahan_menu_categ" 
+        name="Bahan" 
+        parent="hmcoffee_menu_root" 
+        sequence="15"/>
 
-</data>
+        <!-- Produk Category Menu -->
+        <menuitem
+        id="produk_menu_categ"
+        name="Produk"
+        parent="hmcoffee_menu_root"
+        sequence="2"/>
+
+        <!-- Supplier Category Menu -->
+        <menuitem 
+        id="supplier_menu_categ" 
+        name="Supplier" 
+        parent="hmcoffee_menu_root" 
+        sequence="10"/>
+    </data>
 </odoo>

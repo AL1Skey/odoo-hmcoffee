@@ -29,6 +29,10 @@
         'views/templates.xml',
         'views/menu.xml',
         'views/pegawai_view.xml',
+        'views/bahan_view.xml',
+        'views/produk_view.xml',
+        'views/supplier_view.xml',
+        
         
     ],
     # only loaded in demonstration mode
