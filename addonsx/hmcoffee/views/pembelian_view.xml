@@ -6,7 +6,7 @@
         <field name="model">hmcoffee.pembelian</field>
         <field name="arch" type="xml">
             <tree string="Pembelian">
-                <field name="nama_supplier"/>
+                <field name="supplier_id"/>
                 <field name="tgl_pembelian"/>
                 <field name="detail_pembelian"/>
             </tree>
@@ -21,7 +21,7 @@
             <form string="Pembelian">
                 <sheet>
                     <group name="pembelian" string="Pembelian">
-                        <field name="nama_supplier"/>
+                        <field name="supplier_id"/>
                         <field name="tgl_pembelian"/>
                     </group>
                     <group name="Detail Pembelian" string="Detail Pembelian">

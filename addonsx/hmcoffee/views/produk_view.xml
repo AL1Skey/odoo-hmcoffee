@@ -6,7 +6,7 @@
         <field name="model">hmcoffee.produk</field>
         <field name="arch" type="xml">
             <tree string="Produk">
-                <field name="nama"/>
+                <field name="name"/>
                 <field name="harga"/>
                 <field name="kategori"/>
             </tree>
@@ -21,14 +21,14 @@
             <form string="Produk">
                 <sheet>
                     <group name="Produk" string="Produk">
-                        <field name="nama"/>
+                        <field name="name"/>
                         <field name="kategori"/>
                         <field name="harga"/>
                     </group>
                         <group name="Bahan-Bahan" string="Bahan-Bahan">
-                        <field name="bahan">
+                        <field name="bahan_ids">
                             <tree string="Bahan-bahan" editable="bottom">
-                                <field name="nama" />
+                                <field name="name" />
                                 <field name="stok" />
                                 <field name="harga"/>
                             </tree>

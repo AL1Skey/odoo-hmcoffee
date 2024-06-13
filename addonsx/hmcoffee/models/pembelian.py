@@ -4,7 +4,7 @@ class Pembelian(models.Model):
     _name = 'hmcoffee.pembelian'
     _description = 'Pembelian'
 
-    nama_supplier = fields.Many2one(comodel_name='hmcoffee.supplier', string="Supplier")  # id
+    supplier_id = fields.Many2one(comodel_name='hmcoffee.supplier', string="Supplier")  # id
     tgl_pembelian = fields.Date(string='Tanggal Pembelian', default=fields.Datetime.now())
     detail_pembelian = fields.One2many(
         comodel_name='hmcoffee.detail.pembelian',

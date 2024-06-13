@@ -1,7 +1,5 @@
 from odoo import models,api,fields
 
-
-
 class Member(models.Model):
     _name = 'hmcoffee.member'
     _description = 'Member'

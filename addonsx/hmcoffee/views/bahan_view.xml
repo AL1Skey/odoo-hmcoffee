@@ -7,10 +7,10 @@
         <field name="model">hmcoffee.produk.bahan</field>
         <field name="arch" type="xml">
             <tree string="Bahan">
-                <field name="nama"/>
+                <field name="name"/>
                 <field name="harga" />
                 <field name="stok" />
-                <field name="bahan_id" />
+                <field name="produk_id" />
             </tree>
         </field>
     </record>
@@ -31,12 +31,12 @@
             <form string="Bahan">
                 <sheet>
                     <group name="Form Bahan" string="Form Bahan">
-                        <field name="nama"/>
+                        <field name="name"/>
                         <field name="harga" />
                         <field name="stok" />
                     </group>
                     <group name="Form Bahan" string="Form Bahan">
-                       <field name="bahan_id" />
+                       <field name="produk_id" />
                     </group>
                 </sheet>
             </form>

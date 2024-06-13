@@ -6,5 +6,5 @@ done
 
 echo $hmcoffee;
 
-./odoo-bin --addons-path=$hmcoffee -d hmcoffee --db_port 5432 --xmlrpc-port=8070  --limit-memory-hard 0 --limit-time-real=10000 -u hmcoffee
+./odoo-bin --addons-path=$hmcoffee -d coba --db_port 5432 --xmlrpc-port=8070  --limit-memory-hard 0 --limit-time-real=10000 -i base
 # ./odoo-bin --addons-path=$hmcoffee -d hmcoffee --db_port 5432 --xmlrpc-port=8070  --limit-memory-hard 0 --limit-time-real=10000 -i base

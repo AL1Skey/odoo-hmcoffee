@@ -7,9 +7,9 @@
         <field name="arch" type="xml">
             <tree>
                 <!-- Add your fields here -->
-                <field name="nama"/>
+                <field name="name"/>
                 <field name="pic"/>
-                <field name="bahan"/>
+                <field name="bahan_ids"/>
             </tree>
         </field>
     </record>
@@ -23,15 +23,15 @@
                 <sheet>
                     <group name="Form Supplier" string="Form Supplier">
                         <!-- Add your fields here -->
-                        <field name="nama"/>
+                        <field name="name"/>
                         <field name="pic"/>
                     </group>
 
                     <group name="Form Bahan" string="Form Bahan">
                         <!-- Add your fields here -->
-                        <field name="bahan">
+                        <field name="bahan_ids">
                             <tree string="Bahan-Bahan" editable="bottom">
-                                <field name="nama"/>
+                                <field name="name"/>
                                 <field name="harga"/>
                             </tree>
                         </field>
@@ -45,7 +45,7 @@
 
     <!-- hmcoffee.supplier action window -->
     <record id="hmcoffee_supplier_action" model="ir.actions.act_window">
-        <field name="name">hmcoffee.supplier.action</field>
+        <field name="name">Supplier</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">hmcoffee.supplier</field>
         <field name="view_mode">tree,form</field>
