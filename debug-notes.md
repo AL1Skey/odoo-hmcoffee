@@ -82,3 +82,48 @@ access_hmcoffee_pesanan,hmcoffee.pesanan,model_hmcoffee_pesanan,,1,1,1,1
 - Jika ada error di view:
     - jika ada error di view dan muncul di terminal, maka errornya ada di ketidakcocokan antara nama fields di view dan nama fields di model
     - jika tidak ada error di terminal, maka errornya mungkin terdapat di security yang mana sepertinya ada yang duplikat
+
+- Cara debug error 'odoo.exceptions.UserError: No inverse field None found for 'your-model-name'':
+> komenin semua model yang ada di init
+```py
+# # -*- coding: utf-8 -*-
+
+# from . import models
+# from . import hmcoffee_pegawai
+# # from . import pesanan
+# from . import produk
+# from . import supplier
+# # from . import pembelian
+```
+> buka komen satu per satu lalu rerun sampai muncul error tersebut
+```py
+# # -*- coding: utf-8 -*-
+
+from . import models
+# from . import hmcoffee_pegawai
+# # from . import pesanan
+# from . import produk
+# from . import supplier
+# # from . import pembelian
+```
+```py
+# # -*- coding: utf-8 -*-
+
+from . import models
+from . import hmcoffee_pegawai
+# # from . import pesanan
+# from . import produk
+# from . import supplier
+# # from . import pembelian
+```
+```py
+# # -*- coding: utf-8 -*-
+
+from . import models
+from . import hmcoffee_pegawai
+from . import pesanan
+# from . import produk
+# from . import supplier
+# # from . import pembelian
+```
+> Setelah ketemu model yang bermasalah, debug model tsb. Biasanya error seperti ini karena inverse_fieldnya tidak sesuai satu sama lainnya atau belum dimasukin inverse_fieldnya di one2many.

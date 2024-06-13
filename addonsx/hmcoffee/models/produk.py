@@ -31,3 +31,6 @@ class Bahan(models.Model):
         comodel_name='hmcoffee.produk', 
         string="Produk",
         ondelete="cascade")
+    supplier_id = fields.Many2many(
+        comodel_name='hmcoffee.supplier'
+    )

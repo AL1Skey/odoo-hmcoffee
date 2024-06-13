@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Pembelian List View -->
+    <record id="view_pembelian_tree" model="ir.ui.view">
+        <field name="name">pembelian.tree</field>
+        <field name="model">hmcoffee.pembelian</field>
+        <field name="arch" type="xml">
+            <tree string="pembelian">
+                <field name="nama_supplier"/>
+                <field name="detail_pembelian"/>
+                <field name="tgl_pembelian"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- pembelian Form View -->
+    <record id="hmcoffee_pembelian_form" model="ir.ui.view">
+        <field name="name">pembelian.form</field>
+        <field name="model">hmcoffee.pembelian</field>
+        <field name="arch" type="xml">
+            <form string="pembelian">
+                <sheet>
+                    <group name="pembelian" string="pembelian">
+                        <field name="nama_supplier"/>
+                        <field name="tgl_pembelian"/>
+                    </group>
+                        <group name="Detail Pembelian" string="Detail Pembelian">
+                        <field name="detail_pembelian">
+                        </field>
+                        </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action for pembelian -->
+    <record id="hmcoffee_pembelian_action" model="ir.actions.act_window">
+        <field name="name">pembelian</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hmcoffee.pembelian</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menuitem for pembelian -->
+    <menuitem id="hmcoffee_pembelian_menu" name="Daftar pembelian" parent="pembelian_menu_categ" action="hmcoffee_pembelian_action" sequence="20"/>
+</odoo>

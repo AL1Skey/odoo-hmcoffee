@@ -6,4 +6,6 @@ class Supplier(models.Model):
 
     nama = fields.Char(string='Nama Supplier')
     pic = fields.Char(string='PIC')
+    pembelian=fields.One2many(comodel_name='hmcoffee.pembelian',
+    inverse_name="nama_supplier",string="Pembelian")
     bahan = fields.Many2many(comodel_name='hmcoffee.produk.bahan', string="Bahan")
