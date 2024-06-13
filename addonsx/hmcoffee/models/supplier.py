@@ -3,6 +3,7 @@ from odoo import fields, models, api
 class Supplier(models.Model):
     _name = 'hmcoffee.supplier'
     _description = 'Supplier Model'
+    _rec_name = 'nama'# for labeling many2one
 
     nama = fields.Char(string='Nama Supplier')
     pic = fields.Char(string='PIC')

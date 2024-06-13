@@ -127,3 +127,5 @@ from . import pesanan
 # # from . import pembelian
 ```
 > Setelah ketemu model yang bermasalah, debug model tsb. Biasanya error seperti ini karena inverse_fieldnya tidak sesuai satu sama lainnya atau belum dimasukin inverse_fieldnya di one2many.
+
+- Yang di

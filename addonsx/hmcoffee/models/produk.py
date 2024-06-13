@@ -22,6 +22,7 @@ class Produk(models.Model):
 class Bahan(models.Model):
     _name = "hmcoffee.produk.bahan"
     _description = "model.technical.name"
+    _rec_name="nama"
 
     nama = fields.Char(string="Nama Bahan")
     harga = fields.Integer(string="Harga")
